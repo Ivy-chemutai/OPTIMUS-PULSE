@@ -1,0 +1,188 @@
+/* Professional & Inclusive Design */
+:root {
+    --primary-blue: #2563eb;
+    --secondary-blue: #1e40af;
+    --accent-teal: #0891b2;
+    --neutral-gray: #333;
+    --light-gray: #f8fafc;
+    --dark-gray: #334155;
+    --success-green: #059669;
+    --warm-white: #fefefe;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-gray);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+    color: var(--warm-white);
+    padding: 6rem 0;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Service Cards */
+.service-card {
+    transition: all 0.3s ease;
+    height: 100%;
+    border: none ;
+    border-radius: 12px ;
+    background: var(--warm-white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+    border-left: 4px solid var(--accent-teal) ;
+}
+
+.service-card .card-body {
+    padding: 2.5rem ;
+}
+
+.service-card .card-title {
+    color: var(--secondary-blue) ;
+    font-size: 1.25rem ;
+    font-weight: 600 ;
+    margin-bottom: 1rem ;
+}
+
+.service-card .card-text {
+    color: var(--neutral-gray) ;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Sections */
+.section-padding {
+    padding: 5rem 0;
+}
+
+.bg-light {
+    background-color: var(--light-gray) ;
+}
+
+/* Typography */
+.display-3 {
+    font-weight: 700 ;
+    letter-spacing: -0.02em;
+}
+
+.display-5 {
+    font-weight: 600 ;
+    color: var(--secondary-blue) ;
+}
+
+.lead {
+    color: var(--neutral-gray) ;
+    font-size: 1.1rem ;
+}
+
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: var(--warm-white);
+    position: relative;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.contact-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-section .text-info {
+    color: #333 ;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer-section {
+    background: var(--primary-blue);
+    color: var(--warm-white);
+}
+
+/* Accessibility & Inclusivity */
+.btn, .card, .service-card {
+    border-radius: 8px;
+}
+
+/* Focus states for accessibility */
+.service-card:focus-within {
+    outline: 2px solid var(--accent-teal);
+    outline-offset: 2px;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 4rem 0;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem ;
+    }
+    
+    .section-padding {
+        padding: 3rem 0;
+    }
+    
+    .service-card .card-body {
+        padding: 2rem ;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Professional hover effects */
+.container h2 {
+    position: relative;
+}
+
+.container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-teal), var(--primary-blue));
+    border-radius: 2px;
+}
+.container h2:hover::after {
+    width: 80px;
+    transition: width 0.3s ease;
+}
