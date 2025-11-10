@@ -100,7 +100,7 @@ body {
 
 /* Contact Section */
 .contact-section {
-    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
     color: var(--warm-white);
     position: relative;
 }
@@ -125,9 +125,13 @@ body {
     font-weight: 500;
 }
 
+.contact-section h2 {
+    color: var(--warm-white);
+}
+
 /* Footer */
 .footer-section {
-    background: var(--primary-blue);
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
     color: var(--warm-white);
 }
 
